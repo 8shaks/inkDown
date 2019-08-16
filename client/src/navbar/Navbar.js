@@ -49,7 +49,7 @@ newPage = () => {
         }
         return (
             <div className={this.state.navbarClass}> 
-            <Link to='/' className='navbar-logo'>inkDown</Link>
+            <Link to='/' onClick={this.newPage} className='navbar-logo'>inkDown</Link>
             <i className="fas fa-bars menu-icon" onClick={this.expandMenu}></i>
                 {navbarOptions}
             </div>
