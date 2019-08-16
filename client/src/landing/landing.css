@@ -1,0 +1,65 @@
+.landing{
+    background-image: url('./landing-hero-image.jpg');
+    height:85vh;
+    background-position: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Fira Sans', sans-serif;
+    /* background: linear-gradient(
+        url('../images/giphy.gif')
+        rgba(20,20,20, .5), 
+        rgba(20,20,20, .5)); */
+    text-align: center;
+    padding: 0 5%;
+}
+
+.landing-heading{
+    padding:  12% 0 ;
+    display:inline-block;
+}
+.landing-heading h2{
+    color:white;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    font-size: 7em;
+    animation: 
+      typing 2.5s steps(20, end),
+      blink-caret .75s step-end infinite;
+      width:auto;
+}
+
+
+.landing span{
+  color:white;
+  font-size:1.25em;
+ 
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  @media only screen and (max-width: 900px) {
+    .landing-heading h2{
+
+        color:white;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 30% auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    font-size: 3em;
+    animation: 
+      typing 2.5s steps(20, end),
+      blink-caret .75s step-end infinite;
+    }
+  }
+  

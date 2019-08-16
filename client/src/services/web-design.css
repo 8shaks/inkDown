@@ -1,0 +1,84 @@
+.services-webDesign{
+width:100%;
+margin: auto;
+height:90vh;
+background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./webdesign-hero.jpg') center center no-repeat;
+background-size: cover;
+
+/* border-radius: 50px; */
+padding:2.5% 0;
+
+}
+
+.services-webDesign h1{
+    text-align: center;
+    padding:5% auto;
+    color:white;
+    font-size: 2.5em;
+    font-family: 'Fira Sans', sans-serif;
+    
+    
+}
+.services-webDesign-para1{
+    color:white;
+    margin: 5% 25% 0% 10%;
+    font-family: 'Fira Sans', sans-serif;
+    font-size:1.25em;
+}
+
+.services-webDesign-para2{
+    color:white;
+    margin: 5% 5% 0% 45%;
+    font-family: 'Fira Sans', sans-serif;
+    font-size:1.25em;
+}
+.services-webDesign-contact{
+    color:white;
+    height: 10vh;
+    width:20%;
+    background-color:#4E78F5;
+    font-family: 'Fira Sans', sans-serif;
+    display: inline-block;
+    margin: 5% 70% 0% 10%;
+    display:flex;
+    text-align: center;
+   border-radius: 20px;
+   text-decoration: none;
+
+}
+
+.services-webDesign-contact span{
+    margin:auto;
+    text-align: center;
+   font-size: 1.5em;
+
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 450px) {
+    .services-webDesign{
+    height:100vh;
+        
+        }
+    .services-webDesign-para1{
+        margin:15% 5% 15% 5%;
+        padding: 0 5%; 
+        text-align: center;
+        }
+        
+    .services-webDesign-para2{
+           margin:0% 5% 0 5%;
+           padding: 5% 5%; 
+           text-align: center;
+        }
+        .services-webDesign-contact{
+            width:90%;
+            margin:0 auto;
+            margin-top: 15%;
+        }
+}
+    /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    /* Styles */
+    }
+    
+    
