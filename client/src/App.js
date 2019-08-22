@@ -13,7 +13,7 @@ function App() {
 
       <Route path="/" exact component={Landing} />
       <Route path="/services" exact component={Services} />
-      {/* <Route path="/contact" exact component={Contact} /> */}
+      <Route path="/contact" exact component={Contact} />
     </div>
     </Router>
   );

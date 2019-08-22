@@ -73,13 +73,14 @@ class Contact extends Component {
       content = (
         <div className="contact-me" id="contact-me">
           {" "}
-          <h2 className="contact-me-heading">Contact Me</h2>
+          <h1 className='contact-me-header'><span>Contact</span></h1>
+          <div className='contact-me-caption'>Send us a message below with our contact form. Here's to building a great, benifical relationship for both of us!</div>
+          <img src={require('./toast.jpg')}alt='toast to business'/>
           <div className="contact-me-form">
-            <div className="contact-me-email">
-              <h2 className="contact-me-email-heading">Email</h2>
+            <div className="contact-me-input">
               <input
-                placeholder="Write your Email here!"
-               className='contact-me-email-input'
+                placeholder="Email"
+               className='contact-me-input-box'
                 onChange={this.onChange}
                 id="email"
               />
@@ -87,11 +88,10 @@ class Contact extends Component {
                 <span className="error">{errorsEmail}</span>
               ) : null}
             </div>
-            <div className="contact-me-name">
-              <h2 className="contact-me-name-heading">Email</h2>
+            <div className="contact-me-input">
               <input
-                placeholder="What's your name?"
-               className='contact-me-name-input'
+                placeholder="Name"
+               className='contact-me-input-box'
                 onChange={this.onChange}
                 id="name"
               />
@@ -99,11 +99,10 @@ class Contact extends Component {
                 <span className="error">{errorsName}</span>
               ) : null}
             </div>
-            <div className="contact-me-message">
-              <h2 className="contact-me-message-heading">Message</h2>
+            <div className="contact-me-input">
               <input
-                placeholder="Write your message here!"
-               className='contact-me-message-input'
+                placeholder="Message"
+               className='contact-me-input-message-box'
                 onChange={this.onChange}
                 id="message"
               />

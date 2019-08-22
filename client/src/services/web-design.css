@@ -28,7 +28,7 @@ padding:2.5% 0;
 
 .services-webDesign-para2{
     color:white;
-    margin: 5% 5% 0% 45%;
+    margin: 3% 5% 0% 45%;
     font-family: 'Fira Sans', sans-serif;
     font-size:1.25em;
 }
@@ -39,7 +39,7 @@ padding:2.5% 0;
     background-color:#4E78F5;
     font-family: 'Fira Sans', sans-serif;
     display: inline-block;
-    margin: 5% 70% 0% 10%;
+    margin: 3% 70% 0% 10%;
     display:flex;
     text-align: center;
    border-radius: 20px;
@@ -50,7 +50,7 @@ padding:2.5% 0;
 .services-webDesign-contact span{
     margin:auto;
     text-align: center;
-   font-size: 1.5em;
+    font-size: 1.5em;
 
 }
 /* Smartphones (portrait) ----------- */
