@@ -3,7 +3,8 @@
     height:90px;
     position:relative;
     font-family: 'Fira Sans', sans-serif;
-    overflow:auto;
+    overflow-x:auto;
+    overflow-y:hidden;
     position: fixed;
     width:100%;
     z-index: 100;
