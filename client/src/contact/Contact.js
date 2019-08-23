@@ -20,7 +20,6 @@ class Contact extends Component {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
   };
-
   handleSubmit = e => {
     e.preventDefault();
     let valid = true;
@@ -74,8 +73,8 @@ class Contact extends Component {
         <div className="contact-me" id="contact-me">
           {" "}
           <h1 className='contact-me-header'><span>Contact</span></h1>
+          <div className='contact-me-container'>
           <div className='contact-me-caption'>Send us a message below with our contact form. Here's to building a great, benifical relationship for both of us!</div>
-          <img src={require('./toast.jpg')}alt='toast to business'/>
           <div className="contact-me-form">
             <div className="contact-me-input">
               <input
@@ -100,7 +99,7 @@ class Contact extends Component {
               ) : null}
             </div>
             <div className="contact-me-input">
-              <input
+              <textarea
                 placeholder="Message"
                className='contact-me-input-message-box'
                 onChange={this.onChange}
@@ -109,14 +108,18 @@ class Contact extends Component {
               {errorsMessage !== "" ? (
                 <span className="error">{errorsMessage}</span>
               ) : null}
+              
             </div>
+            <div className='contact-me-submit'>
             <button
               color="primary"
-              className="contact-me-submit"
+             
               onClick={this.handleSubmit}
             >
               Submit
             </button>
+            </div>
+            </div>
           </div>{" "}
         </div>
       );

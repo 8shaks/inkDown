@@ -35,8 +35,10 @@ const email = `
 
 //handle post reqs for contact through email
 app.post("/contact-me/email", (req, res) => {
+  console.log('yo')
   const { errors, isValid } = validateInput(req.body);
   if (!isValid) {
+    console.log(errors)
     return res.status(400).json(errors);
   }
   //Email Config to send to potential client

@@ -1,4 +1,4 @@
 module.exports = {
-  emailPassword: "Shak123456",
-  emailAdress: "shakiran.sathi@gmail.com",
-  };
+  emailPassword: process.env.emailPassword,
+  emailAdress: process.env.emailAdress
+};

@@ -27,24 +27,24 @@ newPage = () => {
         let url = window.location.href
         if(url.includes('services')){
             navbarOptions=(                
-            <ul><li className='navbar-selected'><Link to='/services' onClick={this.newPage}>Services</Link></li>
-            <li><Link to='/contact'>Contact Us</Link></li>
+            <ul><li className='navbar-selected'><Link to='/services#tp' onClick={this.newPage}>Services</Link></li>
+            <li><Link to='/contact' onClick={this.newPage}>Contact Us</Link></li>
             <li><a>About Us</a></li></ul>)
         } else  if(url.includes('contact')){
             navbarOptions=(                
             <ul><li><Link to='/services' onClick={this.newPage}>Services</Link></li>
-            <li  className='navbar-selected'><Link to='/contact'>Contact Us</Link></li>
+            <li  className='navbar-selected'><Link to='/contact' onClick={this.newPage}>Contact Us</Link></li>
             <li><a>About Us</a></li></ul>)
         }
         else  if(url.includes('about-us')){
             navbarOptions=(                
             <ul><li><Link to='/services' onClick={this.newPage}>Services</Link></li>
-            <li ><Link to='/contact'>Contact Us</Link></li>
+            <li ><Link to='/contact' onClick={this.newPage}>Contact Us</Link></li>
             <li  className='navbar-selected'><a>About Us</a></li></ul>)
         }else{
             navbarOptions=(                
                 <ul><li><Link to='/services' onClick={this.newPage}>Services</Link></li>
-                <li ><Link to='/contact'>Contact Us</Link></li>
+                <li ><Link to='/contact' onClick={this.newPage}>Contact Us</Link></li>
                 <li ><a>About Us</a></li></ul>)
         }
         return (
