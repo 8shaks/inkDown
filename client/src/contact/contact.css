@@ -165,7 +165,7 @@ padding:2.5em;
   }
   .contact-me-header{
     font-size: 3em;
-   height: 10vh;
+   height: 15vh;
    
   }
   .contact-me{
@@ -173,3 +173,10 @@ padding:2.5em;
     height:120vh;
   }
 }
+
+@media only screen  and (min-width : 1644px) {
+  .contact-me{
+    font-size: 1.25em;
+    height:135vh;
+  }
+  }

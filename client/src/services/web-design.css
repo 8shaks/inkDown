@@ -81,4 +81,22 @@ padding:2.5% 0;
     /* Styles */
     }
     
-    
+      /* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1644px) {
+   .services-webDesign{
+    font-size: 1.5em;
+
+   }
+   .services-webDesign h1{
+    font-size: 3em;
+
+   }
+   .services-webDesign-para1{
+    margin: 7% 25% 0% 10%;
+}
+
+.services-webDesign-para2{
+    margin: 5% 5% 0% 45%;
+}
+
+    }

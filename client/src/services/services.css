@@ -17,8 +17,6 @@
     height:20vh;
     display: flex;
     align-items: center;
-    
-   
 }
 .services-page-header span{
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -63,10 +61,10 @@
       font-family: 'Titillium Web', sans-serif;
       align-items: center;
       justify-content: center;
-    font-size: 2.5em;}
-  /* .services-cards :nth-child(1){
-  background-color: #C97D60;
-} */
+    font-size: 2.5em;
+  }
+  
+
 .services-cards #graphic-box{
   background-color:#C97D60;
 }
@@ -79,30 +77,28 @@
     background-color: #593F62;
 }
 
-  .services-card {
-    text-align: center;
-    padding: 2.5%;
-    width:50%;
-    height:30vh;
-    color:white;
-    margin: 0 2.5%;
-    text-decoration: none;
-    border-radius: 50px;
-    vertical-align: middle;
-    display: flex; 
+.services-card {
+  text-align: center;
+  padding: 2.5%;
+  width:50%;
+  height:30vh;
+  color:white;
+  margin: 0 2.5%;
+  text-decoration: none;
+  border-radius: 50px;
+  vertical-align: middle;
+  display: flex; 
 
-    -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
-          scroll-behavior: smooth;
-    
-
-  }
-  .services-card:hover{
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.1);
-        transform: scale(1.1);
-    box-shadow: 10px 15px 7px #C7C7C7;
-  }
+  -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        scroll-behavior: smooth;
+}
+.services-card:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.1);
+      transform: scale(1.1);
+  box-shadow: 10px 15px 7px #C7C7C7;
+}
   .services-card div{
 
     margin: auto; /* Important */ 
@@ -134,5 +130,19 @@
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
   /* Styles */
   }
-  
-  
+/*   
+  Desktops and laptops ----------- */
+@media only screen  and (min-width : 1644px) {
+  .services-card{
+    height:25vh;
+    width:20%;
+  }
+  .services-cards{
+    font-size:3.25em;
+  }
+  .services-page-header{
+    font-size: 3em;
+   height: 15vh;
+   
+  }
+  }

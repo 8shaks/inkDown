@@ -10,7 +10,7 @@ export default class Services extends Component {
                 <h1 className='services-page-header'><span>What we do</span></h1>
                 <div className='services-cards'>
               <a href='#'className='services-card' id='graphic-box'><div > Graphic Design<br/><span>Coming Soon</span></div></a>
-                    <a className='services-card'  id='brand-box'><div > Brand Consulting<br/><span>Coming Soon</span></div></a>
+                    <a href ='#'className='services-card'  id='brand-box'><div > Brand Consulting<br/><span>Coming Soon</span></div></a>
                     <a href='#web-design'className='services-card' id='web-box'><div > Web Design<br/><span>Click for more info!</span></div></a>
                     </div>
                     <div className='services-webDesign' id='web-design'> <h1>Web Design</h1>

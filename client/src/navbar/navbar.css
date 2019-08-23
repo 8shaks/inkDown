@@ -12,7 +12,7 @@
 .navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 1% 0;;
+    padding: 10px 0;
    bottom:0;
    right:0;
    position:absolute;
@@ -21,11 +21,10 @@
   .navbar li{
      float:right;
      padding:0 5%;
-  
+    color:white;
   }
   .navbar li a {
     display: block;
-    color: white;
     text-align: center;
     text-decoration: none;
     font-size: 1.25em;
@@ -34,16 +33,15 @@
 .navbar a:hover {
   color: #D0F4EA;
 }
-  .navbar-selected{
-    color:#D0F4EA !important;
+  .navbar-selected a{
+    color:#D0F4EA ;
   }
   .navbar-logo{
     color:white;
     font-size:2.5em;
-    padding:1.5% 0% 0 2% ;
+    padding:35px 0% 10px 2% ;
     position: absolute;
     text-decoration: none;
-    display: flex;
   }
   @media screen and (max-width: 500px) {
     .navbar-activated{
@@ -59,7 +57,7 @@
       transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     }
     .navbar{
-      height:10vh;
+      height:85px;
     }
     .navbar-activated li {
       float: none;

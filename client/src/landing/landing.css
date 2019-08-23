@@ -1,6 +1,6 @@
 .landing{
     background-image: url('./landing-hero-image.jpg');
-    height:90vh;
+    height:100vh;
     background-position: 30%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,7 +34,7 @@
 
 .landing span{
   color:white;
-  font-size:1.25em;
+  font-size:1.5em;
  
 }
 @keyframes typing {
@@ -47,7 +47,7 @@
     from, to { border-color: transparent }
     50% { border-color: orange; }
   }
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 500px) {
     .landing-heading h2{
 
         color:white;
@@ -60,6 +60,9 @@
     animation: 
       typing 2.5s steps(20, end),
       blink-caret .75s step-end infinite;
+    }
+    .landing{
+      height: 100vh;
     }
   }
   
