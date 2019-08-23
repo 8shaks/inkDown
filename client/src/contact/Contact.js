@@ -126,9 +126,7 @@ class Contact extends Component {
     } else {
       content = (
         <div className="contact-me" id="contact-me">
-          <h2 className="contact-me-post-message">
-            Thanks For contacting me! I'll get back to you soon!
-          </h2>
+          <div className='contact-me-container'> <div className='contact-me-caption'>Thanks for contacting us, we'll get back to you as soon as possible. <br/><b>“Growth is never by mere chance; it is the result of forces working together.”</b></div></div>
         </div>
       );
     }
