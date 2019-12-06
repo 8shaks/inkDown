@@ -11,7 +11,7 @@ export default class Navbar extends Component {
    }
 
    
-   expandMenu = () => {
+expandMenu = () => {
     if(this.state.navbarClass === 'navbar')
     this.setState({navbarClass:'navbar-activated'})
     else{

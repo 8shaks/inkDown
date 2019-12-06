@@ -1,7 +1,6 @@
 .navbar{
     background-color: #12130F;
     height:90px;
-    position:relative;
     font-family: 'Fira Sans', sans-serif;
     overflow-x:auto;
     overflow-y:hidden;
@@ -79,7 +78,7 @@
       text-decoration: none;
       font-size: 1.25em;
     }
-    .navbarli {
+    .navbar li {
       float: none;
       display: block;
       margin:35% 0;
