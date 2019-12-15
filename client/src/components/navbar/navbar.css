@@ -1,0 +1,108 @@
+.navbar{
+    background-color: #12130F;
+    height:90px;
+    font-family: 'Fira Sans', sans-serif;
+    overflow-x:auto;
+    overflow-y:hidden;
+    position: fixed;
+    width:100%;
+    z-index: 100;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+   bottom:0;
+   right:0;
+   position:absolute;
+   width:50%;
+  }
+  .navbar li{
+     float:right;
+     padding:0 5%;
+  }
+  .navbar li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25em;
+    color:white;
+  }
+  /* Navbar links on mouse-over */
+.navbar a:hover {
+  color: #D0F4EA;
+}
+  .navbar-selected a{
+    color:#D0F4EA ;
+  }
+  .navbar-logo{
+    color:white;
+    font-size:2.5em;
+    padding:35px 0% 10px 2% ;
+    position: absolute;
+    text-decoration: none;
+  }
+  @media screen and (max-width: 500px) {
+    .navbar-activated{
+      height:100%;
+      background-color: #12130F;
+      font-family: 'Fira Sans', sans-serif;
+      overflow:auto;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width:100%;
+      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+    .navbar{
+      height:85px;
+    }
+    .navbar-activated li {
+      float: none;
+      display: block;
+      margin:35% 0;
+      font-size: 2em;
+    }
+    .navbar-activated ul {
+    position: relative;
+    margin:0;
+    padding:0;
+    
+    }
+    .navbar-activated li a {
+      display: block;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.25em;
+    }
+    .navbar li {
+      float: none;
+      display: block;
+      margin:35% 0;
+      font-size: 2em;
+      display:none;
+    }
+    .navbar ul {
+    position: relative;
+     width:100%;
+     display:none;
+    }
+    .navbar-logo{
+    
+      padding:4% 0% 0 4% ;
+ 
+    }
+   
+    .menu-icon{
+      color:white;
+      float:right;
+      font-size:3em;
+      position: absolute;
+      right:0;
+      top:5;
+      margin: 5% 2.5% 0 0 ;
+    }
+  }

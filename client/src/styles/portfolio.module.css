@@ -1,0 +1,127 @@
+/* compress sections css */
+
+.portfolio{
+    padding-top:90px;
+}
+.header{
+    text-align: center;
+    margin-top: 1em;
+}
+.preview{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5em;
+}
+.preview_item{
+    width:20%;
+}
+.preview_item_img{
+    width:100%;
+}
+.preview_item h4{
+    text-align: center;
+}
+.preview_item span a{
+   text-align: center;
+   display: block;
+   color:#2D74B3;
+}
+.preview_item span a:hover{
+    text-align: center;
+    display: block;
+    color:#1F70FF;
+ }
+
+ /* Template */
+ .template_section{
+     margin-top: 5em;
+     padding-left: 1em;
+     position: relative;
+ }
+ .template_section h2{
+    width:40%;
+    margin-right: 0;
+}
+.template_img{
+    position: absolute !important;
+    width:30%;
+    top: 0;
+    right: 0;
+    margin-right: 2em;
+}
+.template_section p{
+    width:40%;
+
+}
+ /* Ball Runner */
+ .ballRunner_section{
+    margin-top: 5em;
+    padding-left: 1em;
+    position: relative;
+}
+.ballRunner_section h2{
+   width:40%;
+   margin-right: 0;
+}
+.ballRunner_img{
+   position: absolute !important;
+   width:30%;
+   top: 0;
+   right: 0;
+   margin-right: 2em;
+}
+.ballRunner_section p{
+   width:40%;
+}
+ /* Crypto Net */
+ .cryptoNet_section{
+    margin-top: 5em;
+    padding-left: 1em;
+    position: relative;
+}
+.cryptoNet_section h2{
+   width:40%;
+   margin-right: 0;
+}
+.cryptoNet_img{
+   position: absolute !important;
+   width:30%;
+   top: 0;
+   right: 0;
+   margin-right: 2em;
+}
+.cryptoNet_section p{
+   width:40%;
+}
+/* Portfolio */
+.portfolio_section{
+    margin-top: 5em;
+    padding-left: 1em;
+    position: relative;
+}
+.portfolio_section h2{
+   width:40%;
+   margin-right: 0;
+}
+.portfolio_img{
+   position: absolute !important;
+   width:30%;
+   top: 0;
+   right: 0;
+   margin-right: 2em;
+}
+.portfolio_section p{
+   width:40%;
+}
+/* Mobile */
+@media only screen and (max-width: 550px) {
+
+}
+
+/* Tablet */
+@media only screen and (max-width:769px) and (min-width:551px) {
+
+}
+@media only screen and (max-width:1024px) and (min-width:770px) {
+
+ }

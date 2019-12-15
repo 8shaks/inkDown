@@ -1,0 +1,85 @@
+.home{
+    background-image: url('../images/landing-hero-image.jpg');
+    height:100vh;
+    background-position: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    padding: 0 5%;
+}
+
+.heading{
+    padding:  8em 0 0 0;
+    display:inline-block;
+}
+.heading h2{
+    color:white;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    font-size: 7em;
+    font-family: 'Fira Sans', sans-serif;
+    animation: 
+      typing 2.5s steps(20, end),
+      blink-caret .75s step-end infinite;
+      width:auto;
+}
+
+
+.home span{
+  color:white;
+  font-size:1.5em;
+}
+
+.cta{
+  margin:3em auto 0 auto;
+
+}
+
+.portfolio, .contact{
+  display: inline-block;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  border: .15em solid orange; /* The typwriter cursor */
+  background: none;
+  color:white;
+  width:250px;
+  cursor: pointer;
+}
+.portfolio{
+  border-right: none;
+}
+
+.portfolio:hover, .contact:hover{
+  color:orange;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  @media only screen and (max-width: 550px) {
+    .heading h2{
+
+    font-size: 3.5em;
+    
+    }
+    .landing span{
+      display: inline-block;
+      font-size: 1em;
+      width:90%;
+    }
+    .home{
+      height: 100vh;
+    }
+  }
+  

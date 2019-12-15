@@ -1,0 +1,137 @@
+    
+import React, { Component } from "react";
+import contactStyles from '../styles/contact.module.css'
+import axios from "axios";
+import Layout from '../components/layout'
+
+class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      message: "",
+      email: "",
+      errorsEmail: "",
+      errorsMessage: "",
+      errorsName: "",
+      contactStatus: false
+    };
+  }
+  validateEmail = email => {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  };
+  handleSubmit = e => {
+    e.preventDefault();
+    let valid = true;
+    if (this.state.name === "") {
+      this.setState({ errorsName: "Name Field is Required" });
+      valid = false;
+    } else {
+      this.setState({ errorsName: "" });
+    }
+    if (this.state.email === "") {
+      this.setState({ errorsEmail: "Email Field is Required" });
+      valid = false;
+    } else {
+      this.setState({ errorsEmail: "" });
+    }
+    if (!this.validateEmail(this.state.email)) {
+      this.setState({ errorsEmail: "Your email is not valid" });
+      valid = false;
+    } else {
+      this.setState({ errorsEmail: "" });
+    }
+    if (this.state.message < 15) {
+      this.setState({
+        errorsMessage:
+          "Your message is not valid(Must be at least 15 characters)"
+      });
+      valid = false;
+    } else {
+      this.setState({ errorsMessage: "" });
+    }
+    if (valid) {
+      const contactReq = {
+        email: this.state.email,
+        name: this.state.name,
+        message: this.state.message
+      };
+      axios.post("/contact-me/email", contactReq).then(res => console.log(res));
+      this.setState({ contactStatus: true });
+    }
+  };
+  onChange = e => {
+    this.setState({
+      [e.target.id]: e.target.value
+    });
+  };
+  render() {
+    const { errorsEmail, errorsMessage, errorsName } = this.state;
+    let content;
+    if (this.state.contactStatus === false) {
+      content = (
+        <div className="contact-me" id="contact-me">
+          {" "}
+          <h1 className='contact-me-header'><span>Contact</span></h1>
+          <div className='contact-me-container'>
+          <div className='contact-me-caption'>Send us a message below with our contact form. Here's to building a great, benifical relationship for both of us!</div>
+          <div className="contact-me-form">
+            <div className="contact-me-input">
+              <input
+                placeholder="Email"
+               className='contact-me-input-box'
+                onChange={this.onChange}
+                id="email"
+              />
+              {errorsEmail !== "" ? (
+                <span className="error">{errorsEmail}</span>
+              ) : null}
+            </div>
+            <div className="contact-me-input">
+              <input
+                placeholder="Name"
+               className='contact-me-input-box'
+                onChange={this.onChange}
+                id="name"
+              />
+              {errorsName !== "" ? (
+                <span className="error">{errorsName}</span>
+              ) : null}
+            </div>
+            <div className="contact-me-input">
+              <textarea
+                placeholder="Message"
+               className='contact-me-input-message-box'
+                onChange={this.onChange}
+                id="message"
+              />
+              {errorsMessage !== "" ? (
+                <span className="error">{errorsMessage}</span>
+              ) : null}
+              
+            </div>
+            <div className='contact-me-submit'>
+            <button
+              color="primary"
+             
+              onClick={this.handleSubmit}
+            >
+              Submit
+            </button>
+            </div>
+            </div>
+          </div>{" "}
+        </div>
+      );
+    } else {
+      content = (
+        <div className="contact-me" id="contact-me">
+          <div className='contact-me-container'> <div className='contact-me-caption'>Thanks for contacting us, we'll get back to you as soon as possible. <br/><b>“Growth is never by mere chance; it is the result of forces working together.”</b></div></div>
+        </div>
+      );
+    }
+    return <Layout>{content}</Layout>;
+  }
+}
+export default Contact;
