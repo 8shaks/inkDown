@@ -69,7 +69,6 @@
   }
   @media only screen and (max-width: 550px) {
     .heading h2{
-
     font-size: 3.5em;
     
     }
@@ -81,5 +80,25 @@
     .home{
       height: 100vh;
     }
+    .portfolio{
+      border-right: .15em solid orange;
+      border-bottom: none;
+      margin-top: 2em;
+    }
+    .portfolio, .contact{
+      font-size: 1em;
+    }
   }
+  @media only screen and (max-width:769px) and (min-width:551px) {
+    .heading h2{
+      font-size: 4.5em;
+    }
+    .heading{
+      padding-top: 15em;
+    }
+  }
+  @media only screen and (max-width:1024px) and (min-width:770px) {
+
+ 
+   }
   

@@ -2,19 +2,20 @@ import React, { Component } from 'react'
 import'./services.css'
 import'./web-design.css'
 import Layout from '../../components/layout'
-
+import SEO  from '../../components/seo'
 import { Link } from "gatsby";
 export default class Services extends Component {
     render() {
         return (
             <Layout>
+            <SEO title='About Us' description="A digital marketing agency focused on delivering websites, graphics, logos, and videos that provide results for our partners. Here's some more information about who we are and the services we provide."/>
             <div className='services'>
-                <h1 className='services-page-header'><span>What we do</span></h1>
-                <div className='services-cards'>
+                {/* <h1 className='services-page-header'><span>What we do</span></h1> */}
+                {/* <div className='services-cards'>
                     <a href='#'className='services-card' id='graphic-box'><div > Graphic Design<br/><span>Coming Soon</span></div></a>
                     <a href ='#'className='services-card'  id='brand-box'><div > Brand Consulting<br/><span>Coming Soon</span></div></a>
                     <a href='#web-design'className='services-card' id='web-box'><div > Web Design<br/><span>Click for more info!</span></div></a>
-                    </div>
+                    </div> */}
                     <div className='services-webDesign' id='web-design'> <h1>Web Design</h1>
                     <p className='services-webDesign-para1'>At inkDown we make web development <b>easy</b> for <b>you</b>. We take care of <b>everything</b>, from getting your site to the top of google rankings to designing a website that showcases your <b>business's talent</b> and <b>hard work</b>. Our websites are always created with one <b>purpose</b>, to boost your sales and get you the perfect clients your looking for.</p>
                     <p className='services-webDesign-para2'>inkDown's web design process is simple. We keep you goals in mind when creating your website, the design is always catered to ensure your goals are have enough opportunity to be easily be reached. </p>

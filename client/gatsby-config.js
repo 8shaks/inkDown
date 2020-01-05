@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `inkDown`,
+    description: `A digital marketing agency focused on delivering websites, graphics, logos, and videos that provide results for our partners.`,
+    author: `Shakiran Sathiyanathan`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,14 +26,18 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
-    },
-    {
-      resolve: 'gatsby-plugin-exclude',
-      options: { paths: ['/services'] },
     }
+    // {
+    //   resolve: 'gatsby-plugin-exclude',
+    //   options: { paths: ['/services'] },
+    // }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+  proxy: {
+    prefix: "/contact-me",
+    url: "http://localhost:5000",
+  },
   
 }

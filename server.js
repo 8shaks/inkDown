@@ -4,8 +4,22 @@ const nodemailer = require("nodemailer");
 const keys = require("./config/keys");
 const validateInput = require("./validation");
 const path = require("path");
+const compression = require('compression')
 
 const app = express();
+
+app.use(compression())
+app.use(function(req, res, next) {
+  
+  res.header(`Access-Control-Allow-Origin`, `*`)
+  res.header(`Access-Control-Allow-Origin`, `http://localhost:8000`)
+  res.header(`Access-Control-Allow-Credentials`, true)
+  res.header(
+    `Access-Control-Allow-Headers`,
+    `Origin, X-Requested-With, Content-Type, Accept`
+  )
+  next();
+});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -35,7 +49,6 @@ const email = `
 
 //handle post reqs for contact through email
 app.post("/contact-me/email", (req, res) => {
-  console.log('yo')
   const { errors, isValid } = validateInput(req.body);
   if (!isValid) {
     console.log(errors)
@@ -78,13 +91,13 @@ app.post("/contact-me/email", (req, res) => {
 });
 
 //Server static assets if in production for front-end
-if (process.env.NODE_ENV === "production") {
+// if (process.env.NODE_ENV === "production") {
   //set static folder
-  app.use(express.static("client/build"));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
-}
+  app.use(express.static("client/public"));
+  // app.get("*", (req, res) => {
+  //   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  // });
+// }
 
 const port = process.env.PORT || 5000;
 

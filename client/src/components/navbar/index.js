@@ -6,7 +6,8 @@ export default class Navbar extends Component {
    constructor(props){
        super(props)
        this.state={
-           navbarClass : 'navbar'
+           navbarClass : 'navbar',
+           url:''
        }
    }
 
@@ -21,9 +22,11 @@ expandMenu = () => {
 newPage = () => {
     this.setState({navbarClass:'navbar'})
 }
+componentDidMount(){
+    this.setState({url:window.location.href})
+}
     render() {
         let navbarOptions ;
-        let url = window.location.href
         // console.log(url)
         // if(url.includes('services')){
         //     console.log('hi')
@@ -47,7 +50,9 @@ newPage = () => {
         //     </ul>)
         // }else{
             navbarOptions=(                
-                <ul><li><Link to='/services' onClick={this.newPage}>Services</Link></li>
+                <ul>
+                <li><Link to='/portfolio' onClick={this.newPage}>Portfolio</Link></li>
+                <li><Link to='/services' onClick={this.newPage}>About Us</Link></li>
                 <li ><Link to='/contact' onClick={this.newPage}>Contact Us</Link></li>
                 {/* <li ><a>About Us</a></li> */}
                 </ul>)
@@ -55,7 +60,7 @@ newPage = () => {
         return (
             <div className={this.state.navbarClass}> 
             <Link to='/' onClick={this.newPage} className='navbar-logo'>inkDown</Link>
-            <i className="fas fa-bars menu-icon" onClick={this.expandMenu}></i>
+            <div className="menu-icon" onClick={this.expandMenu} style={{color:'white'}}><div className={'navbar-icon-line'}/><div className={'navbar-icon-line'}/><div className={'navbar-icon-line'}/></div>
                 {navbarOptions}
             </div>
         )

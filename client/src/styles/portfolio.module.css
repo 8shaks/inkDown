@@ -20,6 +20,7 @@
 }
 .preview_item h4{
     text-align: center;
+    color:#4271FF;
 }
 .preview_item span a{
    text-align: center;
@@ -33,94 +34,84 @@
  }
 
  /* Template */
- .template_section{
+ .template_section, .ballRunner_section,  .cryptoNet_section, .portfolio_section{
      margin-top: 5em;
      padding-left: 1em;
      position: relative;
  }
- .template_section h2{
+ .template_section h2 a, .ballRunner_section h2 a, .cryptoNet_section h2 a, .portfolio_section h2 a{
     width:40%;
     margin-right: 0;
+    color:#E38212;
 }
-.template_img{
+.template_section h2 a:hover, .ballRunner_section h2 a:hover, .cryptoNet_section h2 a:hover, .portfolio_section h2 a:hover{
+    color:#1DF01D;
+}
+.template_img, .ballRunner_img, .cryptoNet_img, .portfolio_img{
     position: absolute !important;
     width:30%;
     top: 0;
     right: 0;
     margin-right: 2em;
 }
-.template_section p{
+.template_section p, .ballRunner_section p, .cryptoNet_section p, .portfolio_section p{
     width:40%;
 
 }
- /* Ball Runner */
- .ballRunner_section{
-    margin-top: 5em;
-    padding-left: 1em;
-    position: relative;
-}
-.ballRunner_section h2{
-   width:40%;
-   margin-right: 0;
-}
-.ballRunner_img{
-   position: absolute !important;
-   width:30%;
-   top: 0;
-   right: 0;
-   margin-right: 2em;
-}
-.ballRunner_section p{
-   width:40%;
-}
- /* Crypto Net */
- .cryptoNet_section{
-    margin-top: 5em;
-    padding-left: 1em;
-    position: relative;
-}
-.cryptoNet_section h2{
-   width:40%;
-   margin-right: 0;
-}
-.cryptoNet_img{
-   position: absolute !important;
-   width:30%;
-   top: 0;
-   right: 0;
-   margin-right: 2em;
-}
-.cryptoNet_section p{
-   width:40%;
-}
-/* Portfolio */
-.portfolio_section{
-    margin-top: 5em;
-    padding-left: 1em;
-    position: relative;
-}
-.portfolio_section h2{
-   width:40%;
-   margin-right: 0;
-}
-.portfolio_img{
-   position: absolute !important;
-   width:30%;
-   top: 0;
-   right: 0;
-   margin-right: 2em;
-}
-.portfolio_section p{
-   width:40%;
-}
+
 /* Mobile */
 @media only screen and (max-width: 550px) {
+    .header{
+        font-size: 1.55em;
+    }
+    .preview{
+        margin-top: 2em;
+    }
+    .preview_item{
+        width:45%;
+        margin:2em 0;
+    }
+    .preview{
+        flex-wrap: wrap;
+    }
+    /* template */
+    .template_section, .ballRunner_section, .cryptoNet_section, .portfolio_section{
+        margin-top: 1em;
+        padding:1em;
+    }
+    .template_section h2, .ballRunner_section h2, .cryptoNet_section h2, .portfolio_section h2{
+        width:100%;
+    }
+    .template_img, .ballRunner_img, .cryptoNet_img,  .portfolio_img{
+        position: relative !important;
+        width:100%;
+        margin: 0 auto;
+    }
+    .template_section p, .ballRunner_section p, .cryptoNet_section p, .portfolio_section p{
+        width:100%;
+    }
 
+    
 }
 
 /* Tablet */
 @media only screen and (max-width:769px) and (min-width:551px) {
-
+    .template_section h2, .template_section p{
+        width:55%;
+    }
+    /* Ball Runner */
+    .ballRunner_section h2, .ballRunner_section p{
+        width:55%;
+    }
+    /* Crypto Currency */
+    .cryptoNet_section h2, .cryptoNet_section p{
+        width:55%;
+        
+    }
+    /* Portfolio */
+    .portfolio_section h2, .portfolio_section p{
+        width:55%;
+    }
 }
 @media only screen and (max-width:1024px) and (min-width:770px) {
 

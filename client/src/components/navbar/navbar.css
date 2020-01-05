@@ -43,7 +43,16 @@
     position: absolute;
     text-decoration: none;
   }
-  @media screen and (max-width: 500px) {
+  .navbar-icon-line{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+  }
+  .menu-icon{
+    display: none;
+  }
+  @media screen and (max-width: 565px) {
     .navbar-activated{
       height:100%;
       background-color: #12130F;
@@ -97,12 +106,24 @@
     }
    
     .menu-icon{
+      display: block;
       color:white;
       float:right;
-      font-size:3em;
+      font-size:1em;
       position: absolute;
       right:0;
       top:5;
-      margin: 5% 2.5% 0 0 ;
+      margin: 5% 8.5% 0 0 ;
     }
   }
+  /* Tablet */
+@media only screen and (max-width:769px) and (min-width:566px) {
+  .navbar ul {
+   width:70%;
+   padding: 10px 0 0px 0;
+  }
+
+}
+@media only screen and (max-width:1024px) and (min-width:770px) {
+
+ }

@@ -1,4 +1,4 @@
-.contact-me{
+.page{
   background-image:url('../images/john-schnobrich-2FPjlAyMQTA-unsplash.jpg');
 
   background-repeat: no-repeat;
@@ -6,7 +6,7 @@
   height: 150vh;
   padding-top:81px;
 }
-.contact-me-header{
+.header{
     text-align: left;
     font-size: 3em;
     font-family: 'Red Hat Display', sans-serif;
@@ -23,7 +23,7 @@
     
    
 }
-.contact-me-header span{
+.header span{
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
      -ms-animation: fadein 2s; /* Internet Explorer */
@@ -58,19 +58,27 @@
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-.contact-me-caption{
+.caption{
     text-align: center;
     margin:1.5%;
     font-size: 1.25em;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
+.caption b{
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.75em;
+  display: block;
+  margin: 1em auto;
+}
+
 .contact-me img{
     display: block;
     margin:2.5% auto;
     width: 15%;
 }
-.contact-me-container{
+.container{
 background-color: white;
 opacity: 0.9;
 width :70%;
@@ -78,34 +86,32 @@ margin: 2.5em auto;
 border-radius: 50px;
 padding:2.5em;
 }
-.contact-me-input{
+.input{
     display: block;
     margin:2.5% auto;
-    width: 35%;
+    width: 55%;
     font-family: 'Poppins', sans-serif;
 }
-.contact-me-input-box{
+.input_box{
     width: 100%;
-    height:5vh;
     font-size: 1.1em;
     padding:0 5px;
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 500;
     border-top:none;
-  border-right: none;
-  border-left:none;
+    border-right: none;
+    border-left:none;
    
 }
-.contact-me-input-box:focus{
+.input_box:focus{
   outline:none;
   border-bottom-color: #4E78F5
 }
-.contact-me-input-message-box{
+.input_message_box{
     display: inline-block;
     width: 100%;
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 500;
-    height:20vh;
     font-size: 1.1em;
     padding:0 5px;
     resize: none;
@@ -120,13 +126,13 @@ padding:2.5em;
     font-family: 'Red Hat Display', sans-serif;
   font-weight: 500;
 }
-.contact-me-submit{
+.submit{
   text-align: left;
   display: block;
   margin:2.5% auto;
   width: 35%;
 }
-.contact-me-submit button{
+.submit button{
 
   background-color:#4E78F5;
   color:white;
@@ -145,38 +151,66 @@ padding:2.5em;
   color:red;
   margin:0.75em 0 ;
   display: inline-block;
+  font-size: 0.75em;
 }
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 550px) {
-    .contact-me-caption{
-      font-size: 1.25em;
+    .caption{
+      font-size: 1em;
       font-weight: 500;
   }
-  .contact-me-input{
+  .input{
       width: 90%;
       margin:2em auto;
   }
-  .contact-me-submit{
+  .submit{
     width: 55%;
   }
-  .contact-me-container{
-    margin:2em 0;
+  .container{
+    margin:2em auto;
     width:80%;
   }
-  .contact-me-header{
+  .header{
     font-size: 3em;
    height: 15vh;
    
   }
-  .contact-me{
+  .page{
     background-position: 50% 100%;
-    height:120vh;
+
   }
 }
 
-@media only screen  and (min-width : 1644px) {
-  .contact-me{
-    font-size: 1.25em;
-    height:135vh;
+/* Tablet */
+@media only screen and (max-width:769px) and (min-width:551px) {
+  .caption{
+    font-size: 1em;
+  } 
+  .input{
+    width: 90%;
+    margin:2em auto;
   }
+  .submit{
+  width: 55%;
   }
+  .container{
+  margin:2em auto;
+  width:80%;
+  }
+
+}
+@media only screen and (max-width:1024px) and (min-width:770px) {
+
+  .input{
+    width: 90%;
+    margin:2em auto;
+  }
+  .submit{
+  width: 35%;
+  }
+  .container{
+  margin:2em auto;
+  width:80%;
+  }
+
+ }

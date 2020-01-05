@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Navbar from './navbar/index'
-import Header from "./header"
+import Footer from './footer'
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -27,8 +27,7 @@ const Layout = ({ children }) => {
     <>
         <Navbar/>
         <main>{children}</main>
-        <footer>
-        </footer>
+        <Footer/>
     </>
   )
 }

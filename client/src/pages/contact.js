@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import contactStyles from '../styles/contact.module.css'
 import axios from "axios";
 import Layout from '../components/layout'
-
+import SEO from '../components/seo'
 class Contact extends Component {
   constructor(props) {
     super(props);
@@ -57,7 +57,8 @@ class Contact extends Component {
         name: this.state.name,
         message: this.state.message
       };
-      axios.post("/contact-me/email", contactReq).then(res => console.log(res));
+      axios.post("/contact-me/email", contactReq).then(res => console.log(res)).catch((err) => {
+        console.log(err)})
       this.setState({ contactStatus: true });
     }
   };
@@ -71,47 +72,47 @@ class Contact extends Component {
     let content;
     if (this.state.contactStatus === false) {
       content = (
-        <div className="contact-me" id="contact-me">
+        <div className={contactStyles.page} id="contact-me">
           {" "}
-          <h1 className='contact-me-header'><span>Contact</span></h1>
-          <div className='contact-me-container'>
-          <div className='contact-me-caption'>Send us a message below with our contact form. Here's to building a great, benifical relationship for both of us!</div>
-          <div className="contact-me-form">
-            <div className="contact-me-input">
+          <h1 className={contactStyles.header}><span>Contact</span></h1>
+          <div className={contactStyles.container}>
+          <div className={contactStyles.caption}>Send us a message below with our contact form. Here's to building a great, benifical relationship for both of us!</div>
+          <div className={contactStyles.form}>
+            <div className={contactStyles.input}>
               <input
                 placeholder="Email"
-               className='contact-me-input-box'
+               className={contactStyles.input_box}
                 onChange={this.onChange}
                 id="email"
               />
               {errorsEmail !== "" ? (
-                <span className="error">{errorsEmail}</span>
+                <span className={contactStyles.error}>{errorsEmail}</span>
               ) : null}
             </div>
-            <div className="contact-me-input">
+            <div className={contactStyles.input}>
               <input
                 placeholder="Name"
-               className='contact-me-input-box'
+                className={contactStyles.input_box}
                 onChange={this.onChange}
                 id="name"
               />
               {errorsName !== "" ? (
-                <span className="error">{errorsName}</span>
+                <span className={contactStyles.error}>{errorsName}</span>
               ) : null}
             </div>
-            <div className="contact-me-input">
+            <div className={contactStyles.input}>
               <textarea
                 placeholder="Message"
-               className='contact-me-input-message-box'
+                className={contactStyles.input_message_box}
                 onChange={this.onChange}
                 id="message"
               />
               {errorsMessage !== "" ? (
-                <span className="error">{errorsMessage}</span>
+                <span className={contactStyles.error}>{errorsMessage}</span>
               ) : null}
               
             </div>
-            <div className='contact-me-submit'>
+            <div className={contactStyles.submit}>
             <button
               color="primary"
              
@@ -126,12 +127,12 @@ class Contact extends Component {
       );
     } else {
       content = (
-        <div className="contact-me" id="contact-me">
-          <div className='contact-me-container'> <div className='contact-me-caption'>Thanks for contacting us, we'll get back to you as soon as possible. <br/><b>“Growth is never by mere chance; it is the result of forces working together.”</b></div></div>
+        <div className={contactStyles.page} id="contact-me">
+          <div className={contactStyles.container}> <div className={contactStyles.caption}>Thanks for contacting us, we'll get back to you as soon as possible. <br/><b>“Growth is never by mere chance; it is the result of forces working together.”</b></div></div>
         </div>
       );
     }
-    return <Layout>{content}</Layout>;
+    return <Layout> <SEO title='Contact' description='A digital marketing agency focused on delivering websites, graphics, logos, and videos that provide results for our partners. Want to get in touch? Contact us through our form!'/>{content}</Layout>;
   }
 }
 export default Contact;
