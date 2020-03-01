@@ -116,3 +116,13 @@
 @media only screen and (max-width:1024px) and (min-width:770px) {
 
  }
+ @media only screen and  (min-width:1410px){
+    .template_section, .ballRunner_section,  .cryptoNet_section, .portfolio_section{
+        padding-bottom: 2em;
+    }
+  }
+  @media only screen and  (min-width:1860px){
+    .template_section, .ballRunner_section,  .cryptoNet_section, .portfolio_section{
+        padding-bottom: 5em;
+    }
+  }
