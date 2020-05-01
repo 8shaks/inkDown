@@ -14,7 +14,8 @@ class Contact extends Component {
       errorsEmail: "",
       errorsMessage: "",
       errorsName: "",
-      contactStatus: false
+      contactStatus: false,
+      serverError:false
     };
   }
   validateEmail = email => {
@@ -42,7 +43,7 @@ class Contact extends Component {
     } else {
       this.setState({ errorsEmail: "" });
     }
-    if (this.state.message < 15) {
+    if (this.state.message.length < 15) {
       this.setState({
         errorsMessage:
           "Your message is not valid(Must be at least 15 characters)"
@@ -51,24 +52,28 @@ class Contact extends Component {
     } else {
       this.setState({ errorsMessage: "" });
     }
+
     if (valid) {
       const contactReq = {
         email: this.state.email,
         name: this.state.name,
         message: this.state.message
       };
-      axios.post("/contact-me/email", contactReq).then(res => console.log(res)).catch((err) => {
-        console.log(err)})
-      this.setState({ contactStatus: true });
-    }
-  };
+      axios.post("/contact-me/email", contactReq).then(() => {
+        this.setState({ contactStatus: true })
+      }).catch((err) => {
+        console.log(err)
+        this.setState({serverError:"There was a server error, please try again later or email us at designsingenius@gmail.com"})
+      })
+   }
+  }
   onChange = e => {
     this.setState({
       [e.target.id]: e.target.value
     });
   };
   render() {
-    const { errorsEmail, errorsMessage, errorsName } = this.state;
+    const { errorsEmail, errorsMessage, errorsName, serverError } = this.state;
     let content;
     if (this.state.contactStatus === false) {
       content = (
@@ -81,9 +86,10 @@ class Contact extends Component {
             <div className={contactStyles.input}>
               <input
                 placeholder="Email"
-               className={contactStyles.input_box}
+                className={contactStyles.input_box}
                 onChange={this.onChange}
                 id="email"
+                value={this.state.email}
               />
               {errorsEmail !== "" ? (
                 <span className={contactStyles.error}>{errorsEmail}</span>
@@ -95,6 +101,7 @@ class Contact extends Component {
                 className={contactStyles.input_box}
                 onChange={this.onChange}
                 id="name"
+                value={this.state.name}
               />
               {errorsName !== "" ? (
                 <span className={contactStyles.error}>{errorsName}</span>
@@ -106,6 +113,7 @@ class Contact extends Component {
                 className={contactStyles.input_message_box}
                 onChange={this.onChange}
                 id="message"
+                value={this.state.message}
               />
               {errorsMessage !== "" ? (
                 <span className={contactStyles.error}>{errorsMessage}</span>
@@ -115,11 +123,13 @@ class Contact extends Component {
             <div className={contactStyles.submit}>
             <button
               color="primary"
-             
               onClick={this.handleSubmit}
             >
               Submit
             </button>
+            {serverError !== "" ? (
+                <span className={contactStyles.error}>{serverError}</span>
+              ) : null}
             </div>
             </div>
           </div>{" "}

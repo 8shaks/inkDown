@@ -20,7 +20,7 @@ module.exports = function validateInput(data) {
     errors.name = "Name is required";
   }
   if (!Validator.isLength(data.message, { min: 15, max: 200 })) {
-    errors.message = "Passowrd must be between 15 and 200 characters";
+    errors.message = "Message must be between 15 and 200 characters";
   }
   if (Validator.isEmpty(data.message)) {
     errors.message = "Message is required";
