@@ -1,4 +1,4 @@
-# InkDOwn
+# InkDown
 
 A portfolio websie made for a digital agency. I used NodeJS for the backend and ReactJS for the front-end. Originall;y the front-end was made with create react app, however I migrated the front end to GatsbyJS for SEO purposes.
 
