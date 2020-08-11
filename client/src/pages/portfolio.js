@@ -29,9 +29,9 @@ export default class Landing extends Component {
                       <span><Link to='/portfolio/#cryptoNet'>See more</Link></span>
                     </div>
                     <div className={portfolioStyles.preview_item}>
-                      <h4>Portfolio</h4>
-                      <Link to='/portfolio/#portfolio'><Img className={portfolioStyles.preview_item_img} fluid={this.props.data.previewPortfolio.childImageSharp.fluid} alt="Shakiran's personal portfolio website"/></Link>
-                      <span><Link to='/portfolio/#portfolio'>See more</Link></span>
+                      <h4>Kloud</h4>
+                      <Link to='/portfolio/#kloud'><Img className={portfolioStyles.preview_item_img} fluid={this.props.data.previewKloud.childImageSharp.fluid} alt="Shakiran's personal portfolio website"/></Link>
+                      <span><Link to='/portfolio/#kloud'>See more</Link></span>
                     </div>
                 </div>
                 <div className={portfolioStyles.template_section}>
@@ -47,8 +47,8 @@ export default class Landing extends Component {
                   <p >Crypto currency may or may not be the future. Regardless it's a unique idea that could stand to change our economy and the way our society works. We created a social media platform for anybody to discuss crypto. Discuss trading ideas, new blockchains, and your opinion on crypto curreny and where it's headed.</p><a target='_blank' rel="noopener noreferrer" href="http://crypto-net.herokuapp.com/"><Img className={portfolioStyles.cryptoNet_img} fluid={this.props.data.previewCryptoNet.childImageSharp.fluid} alt="Cryptonet Website"/></a>
                 </div>
                 <div className={portfolioStyles.portfolio_section}>
-                  <h2 id='portfolio'><a target='_blank' rel="noopener noreferrer"   alt="Link to Shakiran's personal portfolio website" href="https://ball-runner.herokuapp.com/">Personal Portfolio</a></h2>
-                  <p>Check out one of our developer's personal portfolio. A single page website keeps everything simple and easy to navigate for the user. No need to click links and get redirected over and over again. There's some more projects on there to check out if you're interested! </p><a target='_blank' rel="noopener noreferrer" href="https://ball-runner.herokuapp.com/"><Img className={portfolioStyles.portfolio_img} fluid={this.props.data.previewPortfolio.childImageSharp.fluid} alt="Shakiran's personal portfolio website"/></a>
+                  <h2 id='kloud'><a target='_blank' rel="noopener noreferrer"   alt="Link to Shakiran's personal portfolio website" href="https://ball-runner.herokuapp.com/">Kloud</a></h2>
+                  <p>Kloud is a web app that functions as a social network for music producers. It allows people in the music industry to find new people they want to work with, once they find someone they can collaborate right on the site! Producers on Kloud can also message and share music files with one another to make the collaboration process as easy as possible.  </p><a target='_blank' rel="noopener noreferrer" href="https://ball-runner.herokuapp.com/"><Img className={portfolioStyles.portfolio_img} fluid={this.props.data.previewKloud.childImageSharp.fluid} alt="Shakiran's personal portfolio website"/></a>
                 </div>
             </div>
             </Layout>
@@ -79,7 +79,7 @@ query {
       }
     }
   }
-  previewPortfolio: file(relativePath: { eq: "portfolio/portfolio-preview.png" }) {
+  previewKloud: file(relativePath: { eq: "portfolio/kloud-preview.png" }) {
     childImageSharp {
       fluid {
         ...GatsbyImageSharpFluid
